@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+        // backgroundColor: Colors.amber,
+        appBar: AppBar(
+          backgroundColor: Colors.amber,
+          title: Text(
+            'Hello World',
+            style: TextStyle(fontSize: 30),
+          ),
+          centerTitle: true,
+        ),
+        body: Column(
+          children: [
+            // Image.network(
+            //     "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg"),
+            Image.network(
+              "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg",
+              fit: BoxFit.fill,
+            ),
+            Text(
+              'Hello World',
+              style: TextStyle(fontSize: 30, color: Colors.red),
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(200, 45),
+                backgroundColor: Colors.blue,
+              ),
+              onPressed: () {
+                print("Clicked");
+              },
+              child: Text(
+                'See More',
+                style: TextStyle(color: Colors.red, fontSize: 32, backgroundColor: ),
+              ),
+            )
+          ],
+        )),
+  ));
+}
